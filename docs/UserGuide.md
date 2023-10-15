@@ -106,11 +106,11 @@ Employee ID can either be specified or not. If specified, the application will c
 to check whether the entered ID is unique. If not unique it will show an error. If no Employer ID is specified then the 
 application will automatically assign a unique ID to the employee.
 
-Format: `add [id/EMPLOYEE_ID] name/NAME position/POSITION department/DEPARTMENT salary/SALARY`
+Format: `add i/EMPLOYEE_ID n/NAME p/PHONE e/EMAIL d/DEPARTMENT r/ROLE s/SALARY`
 
 Examples:
-* `add id/A035B name/Richard Hew Jia Liang position/Supervisor department/Marketing salary/5000`
-* `add name/Richard Hew Jia Liang position/Supervisor department/Marketing salary/5000`
+* `add i/A2503 n/John Smith p/98765432 e/johnsmith@example.com d/Marketing r/Sales Associate s/4500`
+* `add i/A2504 n/Jane Doe p/88765432 e/janedoe@example.com d/Technical r/Software Engineer s/5000`
 
 Constraints:
 * Employee ID must be unique if specified and up to 10 characters
@@ -121,13 +121,12 @@ Expected output when employee added successfully:
 * `Employee EMPLOYEE_ID NAME successfully added!`
 
 Expected output when add command fails:
-* Invalid Salary : `Please input a non-negative salary as a numerical value (e.g. 4000)`
-* Duplicate employee ID : `EMPLOYEE_ID already exists`
+* Invalid Salary : `Salary should only contain numbers, and it should be non-negative`
+* Duplicate employee ID : `This person already exists in the address book`
 * Unable to assign employee ID : `There is no employee ID available to be assigned. Please delete unused employees 
 to free up employee IDs`
 * Too long name/position/department : `Please keep the <NAME/POSITION/DEPARTMENT up to 100 characters.`
-* Missing inputs : `<Inputs that are missing> are missing from the command. Please input the add command in the format:
-add [id/EMPLOYEE_ID] name/NAME position/POSITION department/DEPARTMENT salary/SALARY`
+* Missing inputs : `Invalid command format!`
 
 ### Listing a list of employees : `list`
 
@@ -144,7 +143,7 @@ add [id/EMPLOYEE_ID] name/NAME position/POSITION department/DEPARTMENT salary/SA
 
 Edits an existing person in the address book.
 
-Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`
+Format: `edit INDEX [i/ID] [n/NAME] [p/PHONE] [e/EMAIL] [d/DEPARTMENT] [r/ROLE] [s/SALARY] [t/TAG]…​`
 
 * Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index **must be a positive integer** 1, 2, 3, …​
 * At least one of the optional fields must be provided.
@@ -179,7 +178,7 @@ Examples:
 
 Deletes the specified employee from the employee book.
 
-Format: `delete id/EMPLOYEE_ID`
+Format: `delete EMPLOYEE_ID`
 
 * Deletes the employee with the specified `EMPLOYEE_ID`.
 * The `EMPLOYEE_ID` should be the ID of an employee that exists in the employee book.
@@ -187,7 +186,7 @@ Format: `delete id/EMPLOYEE_ID`
 no employee will be deleted or modified.
 
 Examples:
-* `delete id/A1234567B` deletes the employee with the ID `A1234567B` if such employee exists.
+* `delete i/A1234567B` deletes the employee with the ID `A1234567B` if such employee exists.
 
 ### Clearing all entries : `clear`
 
