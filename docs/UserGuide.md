@@ -369,13 +369,13 @@ data, it is recommended to use the `export` command to save a copy of the curren
 Alternatively, you may use the GUI option to import the data file if you are unfamiliar with file paths.
 1. Click File > Import in the top left corner of the application.
 
-   </br><img src="images/ug-import-gui.png" width="243" />
+   <img src="images/ug-import-gui.png" width="243" />
 
 
 2. The file explorer will open and prompt you to select the data file.
 Only `.json` files can be selected as that is the expected format of the data file. _The file explorer will look different depending on your operating system._
 
-   </br><img src="images/ug-import-explorer.png" width="650" />
+   <img src="images/ug-import-explorer.png" width="650" />
 
 
 3. After opening your data file, EmployeeManager will attempt to load the data into the application.
@@ -403,13 +403,13 @@ The export command will **overwrite** any file in the specified location.
 Alternatively, you may use the GUI option to export the data file if you are unfamiliar with file paths.
 1. Click File > Export in the top left corner of the application.
 
-   </br><img src="images/ug-export-gui.png" />
+   <img src="images/ug-export-gui.png" />
 
 
 2. The file explorer will open and prompt you to save the data file. _The file explorer will look
 different depending on your operating system._
 
-   </br><img src="images/ug-export-explorer.png" />
+   <img src="images/ug-export-explorer.png" />
 
 
 3. After selecting your save location, EmployeeManager will attempt to save the data into the specified location.
